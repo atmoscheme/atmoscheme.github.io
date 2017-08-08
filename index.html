@@ -1,0 +1,87 @@
+﻿<html><h1>Контрол оценки и показа рейтинга:</h1>
+<h3>Требования:</h3>
+<p>
+1.       современное решение;<br>
+
+2.       для демонстрации решения используется pages.github.com;<br>
+
+3.       гибкость к окружающему пространству: контрол должен уметь располагаться на любом фоне и при желании легко менять свой "скин";<br>
+
+Обратите внимание, что контрол должен не только выставлять оценку, но и показывать текущую.</p>
+
+
+
+<div class="rating-block">
+    <input id="st5" type="radio" name="rating-stars"/><label for="st5"></label>
+    <input id="st4" type="radio" name="rating-stars"/><label for="st4"></label>
+    <input id="st3" type="radio" name="rating-stars"/><label for="st3"></label>
+    <input id="st2" type="radio" name="rating-stars"/><label for="st2"></label>
+    <input id="st1" type="radio" name="rating-stars"/><label for="st1"></label>
+    </div>
+
+<style>
+
+ html {
+ font-family: sans-serif;
+    color: #464545;}
+
+.rating-block label:hover ~ label {
+	background: url(../mts/Star.png) no-repeat;
+}
+.rating-block {
+	    float: left;
+    margin-left: 233px;
+    
+    background-color: ghostwhite;
+    padding-top: 32px;
+    padding-left: 38px;
+}
+.rating-block input {
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.rating-block input:checked ~ label {
+ background: url(../mts/ActiveStar.png) no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.rating-block label {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  float: right;
+  margin-right: 10px;
+  background: url(../mts/Star.png) no-repeat;
+   position: relative;
+  z-index: 1;
+}
+
+.rating-block label:hover, .rating-block label:hover ~ label {
+   background: url(../mts/ActiveStar.png) no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+.rating-block #st1 {
+  left: 0px;
+}
+.rating-block #st2 {
+  left: 53px;
+}
+.rating-block #st3 {
+  left: 106px;
+}
+.rating-block #st4 {
+  left: 159px;
+}
+.rating-block #st5 {
+  left: 212px;
+}
+
+}</style></html>
